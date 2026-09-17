@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第五屆善終關懷研討會 · 電子展刊</title>
+<meta name="description" content="第五屆善終關懷研討會 2026年10月14日 澳門城市大學文化中心">
+<style>
+  :root{
+    --p-900:#4A4088;
+    --p-800:#5D51A8;
+    --p-700:#6E63BE;
+    --p-600:#857BD0;
+    --p-500:#9C93DE;
+    --p-300:#C4BEEE;
+    --p-200:#DAD6F5;
+    --p-100:#E8E5FA;
+    --p-50:#F2F0FC;
+    --p-25:#F8F7FE;
+    --ink:#3A3463;
+    --ink-2:#635C8F;
+    --ink-3:#938DB5;
+    --paper:#FBF9FF;
+    --line:rgba(110,99,190,.16);
+    --teal:#3F7A6B;
+    --teal-50:#EAF6F1;
+    --amber:#9A6B2A;
+    --amber-50:#FBF3E4;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","PingFang HK","Hiragino Sans CNS","Microsoft JhengHei","Heiti TC","Helvetica Neue",sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.75;
+    font-size:16px;
+  }
+  .wrap{max-width:720px;margin:0 auto;background:var(--paper);min-height:100vh;overflow:hidden}
+
+  .hero{
+    background:linear-gradient(170deg,#F2F0FC 0%,#E8E5FA 55%,#DAD6F5 100%);
+    color:var(--ink);
+    padding:34px 24px 30px;
+    position:relative;
+  }
+  .hero::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
+    background:linear-gradient(90deg,var(--p-500),var(--p-700),var(--p-500));
+  }
+  .hero-top{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+  .badge{
+    display:inline-block;font-size:12px;letter-spacing:.12em;
+    border:1px solid var(--p-500);border-radius:999px;
+    padding:3px 12px;color:var(--p-800);background:rgba(255,255,255,.5);
+  }
+  .edition{display:flex;align-items:flex-end;gap:12px}
+  .edition-num{font-size:60px;font-weight:500;line-height:.85;color:var(--p-600)}
+  .edition-unit{font-size:14px;color:var(--p-800);padding-bottom:6px;letter-spacing:.24em}
+  .hero h1{
+    font-size:29px;font-weight:500;margin:14px 0 0;letter-spacing:.02em;line-height:1.35;
+    color:var(--p-900);
+  }
+  .hero h1 .sub{
+    display:block;font-size:15px;color:var(--p-700);margin-top:8px;letter-spacing:.06em;font-weight:400;
+  }
+
+  .facts{margin-top:24px;display:grid;gap:10px}
+  .fact{
+    display:flex;gap:12px;align-items:flex-start;
+    background:rgba(255,255,255,.72);
+    border:1px solid rgba(110,99,190,.14);
+    border-radius:var(--radius);
+    padding:12px 14px;
+  }
+  .fact-k{font-size:12px;color:var(--p-700);flex:0 0 54px;letter-spacing:.08em;padding-top:2px}
+  .fact-v{font-size:14.5px;color:var(--ink);line-height:1.6}
+  .fact-v b{font-weight:500;color:var(--p-900)}
+
+  section{padding:30px 24px}
+  section + section{border-top:1px solid var(--line)}
+  .sec-head{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+  .sec-num{
+    font-size:12px;font-weight:500;color:#fff;background:var(--p-600);
+    width:22px;height:22px;border-radius:7px;
+    display:flex;align-items:center;justify-content:center;flex:0 0 22px;
+  }
+  .sec-head h2{font-size:17px;font-weight:500;margin:0;letter-spacing:.02em;color:var(--p-900)}
+  .sec-head .en{font-size:11px;color:var(--ink-3);letter-spacing:.1em;margin-left:auto;font-weight:400}
+
+  p{margin:0 0 14px;color:var(--ink-2);font-size:15px}
+  p:last-child{margin-bottom:0}
+  .lead{color:var(--ink);font-size:15.5px}
+
+  .speakers{display:grid;gap:12px}
+  .spk{
+    display:block;
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 16px 16px;position:relative;
+  }
+  .spk::before{
+    content:"";position:absolute;left:0;top:18px;bottom:18px;width:3px;
+    background:var(--p-500);border-radius:0 3px 3px 0;
+  }
+  .spk-head{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+  .spk-photo{
+    width:62px;height:62px;flex:0 0 62px;border-radius:50%;
+    object-fit:cover;background:var(--p-50);
+    border:2px solid var(--p-200);
+  }
+  .spk-body{min-width:0}
+  .spk-name{font-size:16px;font-weight:500;color:var(--p-900);margin-bottom:3px;letter-spacing:.04em}
+  .spk-org{font-size:13px;color:var(--ink-2);line-height:1.55}
+  .spk-bio{
+    font-size:13.5px;color:var(--ink-2);line-height:1.8;
+    padding-top:12px;border-top:1px dashed var(--p-200);
+    text-align:justify;
+  }
+  .spk-bio strong{font-weight:500;color:var(--p-800)}
+
+  .day-label{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:500;color:var(--p-800);
+    background:var(--p-100);border:1px solid var(--p-200);
+    border-radius:8px;padding:5px 12px;margin-bottom:20px;
+  }
+  .timeline{position:relative;margin:0}
+  .tl-item{position:relative;padding-left:92px;padding-bottom:20px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{
+    content:"";position:absolute;left:76px;top:24px;bottom:-4px;width:1px;
+    background:var(--p-200);
+  }
+  .tl-item:last-child::before{display:none}
+  .tl-time{
+    position:absolute;left:0;top:2px;width:66px;
+    font-size:12.5px;font-weight:500;color:var(--p-700);
+    font-variant-numeric:tabular-nums;line-height:1.45;
+  }
+  .tl-dot{
+    position:absolute;left:72px;top:8px;width:9px;height:9px;border-radius:50%;
+    background:#fff;border:2px solid var(--p-500);
+  }
+  .tl-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .tl-title{font-size:15px;font-weight:500;color:var(--ink);line-height:1.55}
+  .tl-who{
+    display:inline-block;font-size:12px;color:var(--p-800);
+    background:var(--p-100);border-radius:6px;padding:2px 9px;margin-top:8px;
+  }
+  .tl-card.break{background:var(--p-25);border-style:dashed}
+  .tl-card.break .tl-title{color:var(--ink-3);font-size:14px;font-weight:400}
+  .tl-item.minor .tl-dot{width:7px;height:7px;left:73px;top:9px;border-width:2px;border-color:var(--ink-3)}
+
+  .info-grid{display:grid;gap:10px}
+  .info-card{border-radius:var(--radius);padding:14px 16px;border:1px solid var(--line);background:#fff}
+  .info-card.tint-teal{background:var(--teal-50);border-color:rgba(63,122,107,.2)}
+  .info-card.tint-amber{background:var(--amber-50);border-color:rgba(154,107,42,.2)}
+  .info-k{font-size:12px;letter-spacing:.08em;color:var(--ink-3);margin-bottom:5px}
+  .info-v{font-size:15px;font-weight:500;color:var(--ink);line-height:1.6}
+  .info-card.tint-teal .info-k{color:var(--teal)}
+  .info-card.tint-amber .info-k{color:var(--amber)}
+  .info-note{font-size:13px;color:var(--ink-2);font-weight:400;margin-top:4px}
+
+  .org-block{margin-bottom:20px}
+  .org-block:last-child{margin-bottom:0}
+  .org-label{
+    font-size:12px;letter-spacing:.1em;color:var(--ink-3);margin-bottom:10px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .org-label::after{content:"";flex:1;height:1px;background:var(--line)}
+  .org-list{display:grid;gap:8px}
+  .org-item{
+    display:flex;gap:10px;align-items:flex-start;
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:10px 12px;font-size:14px;color:var(--ink);
+  }
+  .org-item .dot{width:5px;height:5px;border-radius:50%;background:var(--p-500);flex:0 0 5px;margin-top:9px}
+  .org-item.supp .dot{background:var(--ink-3)}
+
+  .cta{
+    background:linear-gradient(140deg,var(--p-700),var(--p-800));
+    color:#fff;border-radius:var(--radius);
+    padding:22px 20px;margin-bottom:14px;
+  }
+  .cta h3{margin:0 0 6px;font-size:17px;font-weight:500}
+  .cta p{margin:0 0 16px;color:rgba(255,255,255,.8);font-size:14px}
+  .btn-reg{
+    display:block;text-align:center;text-decoration:none;
+    background:#fff;color:var(--p-800);
+    font-size:16px;font-weight:500;letter-spacing:.08em;
+    border-radius:10px;padding:14px 20px;
+    transition:opacity .15s;
+  }
+  .btn-reg:active{opacity:.82}
+  .cta-checkin p b{font-weight:500;color:#fff}
+  .qr-inline{
+    background:#fff;border-radius:12px;padding:12px;
+    display:inline-block;margin:6px auto 14px;
+  }
+  .qr-inline img{display:block;width:180px;height:180px}
+  .link-checkin{
+    display:block;text-align:center;text-decoration:none;word-break:break-all;
+    background:rgba(255,255,255,.16);color:#fff;
+    font-size:13px;letter-spacing:.02em;
+    border-radius:9px;padding:11px 14px;margin-bottom:2px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  .link-checkin:active{opacity:.82}
+  .cta-checkin{text-align:center}
+  .cta-checkin h3,.cta-checkin p{text-align:left}
+  .cta-deadline{
+    display:inline-block;margin-top:14px;font-size:13.5px;font-weight:500;
+    background:rgba(255,255,255,.16);border-radius:8px;padding:6px 14px;
+    color:#fff;
+  }
+  .contact-list{display:grid;gap:8px}
+  .contact-row{
+    display:flex;gap:12px;align-items:center;
+    background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;
+  }
+  .contact-k{font-size:12px;color:var(--ink-3);flex:0 0 64px;letter-spacing:.06em}
+  .contact-v{font-size:14.5px;color:var(--ink);font-weight:500;word-break:break-all}
+  .contact-v a{color:var(--p-700);text-decoration:none;border-bottom:1px solid var(--p-200)}
+
+  footer{
+    background:linear-gradient(140deg,var(--p-700),var(--p-800));
+    color:rgba(255,255,255,.7);
+    padding:22px 24px 28px;font-size:12px;line-height:1.85;text-align:center;
+  }
+  footer .f-title{color:#fff;font-size:13px;margin-bottom:4px;letter-spacing:.06em}
+
+  @media (min-width:600px){
+    body{background:#E8E5FA;padding:0}
+    .hero{padding:44px 40px 36px}
+    .hero h1{font-size:34px}
+    section{padding:36px 40px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-top">
+      <span class="badge">電子展刊</span>
+    </div>
+    <div class="edition">
+      <span class="edition-num">5</span>
+      <span class="edition-unit">屆</span>
+    </div>
+    <h1>善終關懷研討會<span class="sub">Symposium on End-of-Life Care</span></h1>
+
+    <div class="facts">
+      <div class="fact">
+        <span class="fact-k">會議時間</span>
+        <span class="fact-v"><b>2026年10月14日</b>（星期三）14:00 – 18:00</span>
+      </div>
+      <div class="fact">
+        <span class="fact-k">會議地點</span>
+        <span class="fact-v">澳門城市大學文化中心</span>
+      </div>
+      <div class="fact">
+        <span class="fact-k">對　　象</span>
+        <span class="fact-v">社工及相關專業人士、醫護人員、師生</span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">1</span>
+      <h2>會議背景</h2>
+      <span class="en">BACKGROUND</span>
+    </div>
+    <p class="lead">隨著澳門步入高齡社會，晚期照護與善終服務的需求日益迫切。</p>
+    <p>本屆研討會聚焦如何回應高齡社會需求，探討創新科技與安寧臨終照護的結合，協助長者達至「在地生活與善終」的願景。</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">2</span>
+      <h2>主講嘉賓</h2>
+      <span class="en">KEYNOTE SPEAKERS</span>
+    </div>
+    <div class="speakers">
+      <div class="spk">
+        <div class="spk-head">
+          <img class="spk-photo" src="speakers/spk1.jpg" alt="胡笑霞">
+          <div class="spk-body">
+            <div class="spk-name">胡笑霞 博士</div>
+            <div class="spk-org">澳門鏡湖護理學院 副教授</div>
+          </div>
+        </div>
+        <div class="spk-bio">
+          胡笑霞博士現任澳門鏡湖護理學院副教授，澳洲新南威爾士大學公共衞生與社區醫學哲學博士。主要研究領域包括健康社會學、健康促進、人工智能與醫護教育及跨學科大健康合作。胡博士主持與參與多項澳門基金會及政府資助研究，涵蓋 AI 素養、情緒社交學習及長者健康。<strong>本次研討會中，她將分享創新護理模式在安寧照護的應用</strong>，探討如何運用科技與哲學重構護理教育及晚期照顧。
+        </div>
+      </div>
+
+      <div class="spk">
+        <div class="spk-head">
+          <img class="spk-photo" src="speakers/spk2.jpg" alt="王文津">
+          <div class="spk-body">
+            <div class="spk-name">王文津 博士</div>
+            <div class="spk-org">澳門城市大學 大健康學院<br>創新社會工作範疇 助理教授</div>
+          </div>
+        </div>
+        <div class="spk-bio">
+          王文津博士現任澳門城市大學大健康學院創新社會工作範疇助理教授，畢業於美國德拉瓦大學（University of Delaware）取得社會學博士學位，曾於北京大學從事博士後研究。其研究領域聚焦於健康社會決定因素與不平等、社會資本與健康、青少年風險行為及集體效能感等。<strong>王博士將於本次研討會分享「澳門居民預立醫療照護計劃意向之背景與現狀」</strong>，從社會學與健康促進的角度分析澳門居民對預立醫療規劃的認知、態度及影響因素。
+        </div>
+      </div>
+
+      <div class="spk">
+        <div class="spk-head">
+          <img class="spk-photo" src="speakers/spk3.jpg" alt="梁梓敦">
+          <div class="spk-body">
+            <div class="spk-name">梁梓敦 先生</div>
+            <div class="spk-org">香港註冊社工 香港生死學協會 總監<br>美國死亡教育及輔導學會 院士</div>
+          </div>
+        </div>
+        <div class="spk-bio">
+          梁梓敦先生為香港註冊社工、香港生死學協會總監，並獲選美國死亡教育及輔導學會院士及美國社工協會高級安寧服務社工。自 2007 年起致力於臨終關懷、善別輔導與生死教育，服務超過 1,000 個喪親家庭及臨終患者，曾獲香港第 25 屆優秀社工獎。他亦是「死亡節」創辦人，著有《生前死後》等 4 部生死教育書籍及繪本。<strong>本次演講主題為「無憂十計」</strong>，分享如何透過系統化規劃引導大眾正視臨終準備與生前規劃。
+        </div>
+      </div>
+
+      <div class="spk">
+        <div class="spk-head">
+          <img class="spk-photo" src="speakers/spk4.jpg" alt="蔡遠寧">
+          <div class="spk-body">
+            <div class="spk-name">蔡遠寧 博士</div>
+            <div class="spk-org">資深社會工作與健康教育專家</div>
+          </div>
+        </div>
+        <div class="spk-bio">
+          蔡遠寧博士為資深社會工作與健康教育專家，曾任澳門城市大學副教授、聖若瑟大學副教授，以及香港衞生署衞生防護中心中央健康教育組總監。蔡博士早年於澳洲從事非政府機構及政府部門工作，長期獲港澳政府委任多項公職。他近年專注於亞太地區初級衛生保健與高齡化公共衛生領域研究，著作豐富。<strong>本次演講將結合其豐富的跨地區社福與健康推廣經驗</strong>，探討高齡社會下社區安寧服務與政策之推動。
+        </div>
+      </div>
+
+      <div class="spk">
+        <div class="spk-head">
+          <img class="spk-photo" src="speakers/spk5.jpg" alt="鄭珊珊">
+          <div class="spk-body">
+            <div class="spk-name">鄭珊珊 女士</div>
+            <div class="spk-org">澳門明愛 · 黑沙環明暉護養院 院長</div>
+          </div>
+        </div>
+        <div class="spk-bio">
+          鄭珊珊女士現任澳門明愛 · 黑沙環明暉護養院院長。獲得重急症護理專科資格，曾任職於醫院具備多年的危重症臨床與醫院質量管理實務經驗。目前致力於推動長者照護與服務品質提升。<strong>積極於院舍推動「預設醫療照護」</strong>，協助長者與家屬在受尊重的環境中落實長者生命自主權，為長者打造有尊嚴的晚年生活。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">3</span>
+      <h2>研討會日程</h2>
+      <span class="en">PROGRAMME</span>
+    </div>
+
+    <div class="day-label">2026年10月14日（星期三）· 澳門城市大學文化中心</div>
+
+    <div class="timeline">
+      <div class="tl-item minor">
+        <span class="tl-time">13:30<br>– 14:15</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card break">
+          <div class="tl-title">簽到與報到 · 開幕式</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <span class="tl-time">14:15<br>– 15:15</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-title">創新照護模式在安寧照護的應用</div>
+          <span class="tl-who">胡笑霞</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <span class="tl-time">14:15<br>– 15:15</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-title">澳門居民預立醫療照護計劃意向之背景與現狀</div>
+          <span class="tl-who">王文津</span>
+        </div>
+      </div>
+
+      <div class="tl-item minor">
+        <span class="tl-time">15:15<br>– 15:45</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card break">
+          <div class="tl-title">茶歇與交流</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <span class="tl-time">15:45<br>– 17:15</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-title">無憂十計</div>
+          <span class="tl-who">梁梓敦</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <span class="tl-time">15:45<br>– 17:15</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-title">香港臨終關顧新里程：《維持生命治療的預作決定條例》</div>
+          <span class="tl-who">蔡遠寧</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <span class="tl-time">15:45<br>– 17:15</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-title">尊嚴晚晴，由心做主：安老院舍推動「預設照護計劃」的暖心探索</div>
+          <span class="tl-who">鄭珊珊</span>
+        </div>
+      </div>
+
+      <div class="tl-item minor">
+        <span class="tl-time">17:15<br>– 17:45</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-title">圓桌會議</div>
+        </div>
+      </div>
+
+      <div class="tl-item minor">
+        <span class="tl-time">17:45<br>– 18:00</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-title">閉幕致辭</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">4</span>
+      <h2>持續進修與簽到</h2>
+      <span class="en">CPD &amp; CHECK-IN</span>
+    </div>
+    <div class="info-grid">
+      <div class="info-card tint-teal">
+        <div class="info-k">CPD / 社工持續進修時數</div>
+        <div class="info-v">申請中</div>
+        <div class="info-note">社工及專業人士持續進修時數正在申請，稍後公佈。</div>
+      </div>
+      <div class="info-card tint-amber">
+        <div class="info-k">會議簽到</div>
+        <div class="info-v">掃碼或點擊連結簽到</div>
+        <div class="info-note">所有與會人員均需簽到，詳見下方說明。</div>
+      </div>
+    </div>
+
+    <div class="cta cta-checkin" style="margin-top:16px">
+      <h3>會議簽到</h3>
+      <p>所有與會人員請<b>掃描下方二維碼</b>，或<b>點擊網址連結</b>，進行簽到。</p>
+      <div class="qr-inline"><img src="qr-checkin.jpg" alt="會議簽到二維碼"></div>
+      <a class="link-checkin" href="https://www.wjx.top/vm/YYd3avn.aspx" target="_blank" rel="noopener">https://www.wjx.top/vm/YYd3avn.aspx</a>
+      <div class="cta-deadline">請於會議開始前完成簽到</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">5</span>
+      <h2>會務聯絡</h2>
+      <span class="en">CONTACT</span>
+    </div>
+    <div class="contact-list">
+      <div class="contact-row">
+        <span class="contact-k">聯絡人</span>
+        <span class="contact-v">葉小姐</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-k">電話</span>
+        <span class="contact-v"><a href="tel:85902939">8590 2939</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-k">電郵</span>
+        <span class="contact-v"><a href="mailto:disw@cityu.edu.mo">disw@cityu.edu.mo</a></span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">6</span>
+      <h2>主辦與支持單位</h2>
+      <span class="en">ORGANISERS</span>
+    </div>
+
+    <div class="org-block">
+      <div class="org-label">主辦單位</div>
+      <div class="org-list">
+        <div class="org-item"><span class="dot"></span><span>創新社會工作系</span></div>
+        <div class="org-item"><span class="dot"></span><span>耆康長者綜合服務中心</span></div>
+        <div class="org-item"><span class="dot"></span><span>澳門城市大學大健康學院</span></div>
+        <div class="org-item"><span class="dot"></span><span>澳門鏡湖護理學院</span></div>
+      </div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-label">支持單位</div>
+      <div class="org-list">
+        <div class="org-item supp"><span class="dot"></span><span>澳門社會工作者專業委員會</span></div>
+        <div class="org-item supp"><span class="dot"></span><span>澳門鏡湖護理學院</span></div>
+        <div class="org-item supp"><span class="dot"></span><span>澳門生死學協會</span></div>
+        <div class="org-item supp"><span class="dot"></span><span>澳門明愛</span></div>
+        <div class="org-item supp"><span class="dot"></span><span>澳門心理學會</span></div>
+        <div class="org-item supp"><span class="dot"></span><span>恩暉綜合醫療中心</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="f-title">第五屆善終關懷研討會</div>
+    2026年10月14日（星期三）· 澳門城市大學文化中心<br>
+    電子展刊 · 內容以主辦單位最終公佈為準
+  </footer>
+
+</div>
+</body>
+</html>
